@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequence", "Wise-It\LongestSequence\LongestSequence.csproj", "{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceNewImplementation", "Wise-It\LongestSequenceNewImplementation\LongestSequenceNewImplementation.csproj", "{98921BC0-7072-42E5-9735-3214BEE63C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceNewImplementation", "LongestSequenceNewImplementation\LongestSequenceNewImplementation.csproj", "{98921BC0-7072-42E5-9735-3214BEE63C9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequence", "Wise-It\LongestSequence\LongestSequence.csproj", "{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{98921BC0-7072-42E5-9735-3214BEE63C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98921BC0-7072-42E5-9735-3214BEE63C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98921BC0-7072-42E5-9735-3214BEE63C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98921BC0-7072-42E5-9735-3214BEE63C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

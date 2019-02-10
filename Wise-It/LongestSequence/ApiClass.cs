@@ -27,5 +27,10 @@ namespace LongestSequence
             return value;
 
         }
+
+        public static int GetNumDays()
+        {
+            return 8;
+        }
     }
 }

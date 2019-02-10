@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LongestSequence\LongestSequence.csproj">
+      <Project>{ba283282-b011-4e30-a33b-afba3aef1eef}</Project>
+      <Name>LongestSequence</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,8 +11,13 @@ namespace LongestSequence
         private static List<int> theSequance = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
         static void Main(string[] args)
         {
-
-            
+            // Declare the array of two elements:
+            int[][] arr = new int[3][];
+            // Initialize the elements:
+            arr[0] = new int[3] { 11, 2, 4 };
+            arr[1] = new int[3] { 4, 5, 6 };
+            arr[2] = new int[3] { 10, 8, -12 };
+            Console.WriteLine(DiagonalOperations.Difference(arr));
             Solution();
             Console.ReadKey();
 

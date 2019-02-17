@@ -124,4 +124,13 @@ namespace LongestSequence
             return sum;
         }
     }
+
+    public static class HeighestIntNumber
+    {
+        public static int GetHighestNumber(int[] arr)
+        {
+            var max = arr.Max();
+            return arr.Where(n => n == max).Count();
+        }
+    }
 }

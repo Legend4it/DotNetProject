@@ -26,8 +26,10 @@ namespace LongestSequence
 
             //TextAlignment.Staircase(6);
 
-            Console.WriteLine(MiniMax.MinSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
-            Console.WriteLine(MiniMax.MaxSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
+            //Console.WriteLine(MiniMax.MinSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
+            //Console.WriteLine(MiniMax.MaxSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
+
+            Console.WriteLine(HeighestIntNumber.GetHighestNumber(new int[4] { 4,3,1,4}));
 
             Solution();
             Console.ReadKey();

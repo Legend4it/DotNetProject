@@ -69,4 +69,59 @@ namespace LongestSequence
             return sumResult;
         }
     }
+
+    public static class Fraction
+    {
+        public static string PositiveFraction(int[] arr)
+        {
+            var result = arr.Where(x => x > 0).ToList();
+            return (result.Count() / (float)arr.Count()).ToString("0.000000");
+        }
+        public static string NegativeFraction(int[] arr)
+        {
+            var result = arr.Where(x => x < 0).ToList();
+            return (Math.Abs(result.Count() / (float)arr.Count())).ToString("0.000000");
+        }
+        public static string ZeroFraction(int[] arr)
+        {
+            var result = arr.Where(x => x == 0).ToList();
+            return (result.Count() / (float)arr.Count()).ToString("0.000000");
+        }
+    }
+
+    public static class TextAlignment
+    {
+        public static string Staircase(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(new String(' ', n - i) + new String('#', i));
+            }
+            return String.Format("{0,6}","#");
+        }
+    }
+
+    public static class MiniMax
+    {
+        public static double MinSum(int[] arr)
+        {
+            double sum = 0;
+            Array.Sort(arr);
+            for (int i = 0; i < arr.Length-1; i++)
+            {
+                sum = sum + arr[i];
+            }
+            return sum;
+        }
+        public static double MaxSum(int[] arr)
+        {
+            double sum = 0;
+            Array.Sort(arr);
+            for (int i = 1; i < arr.Length; i++)
+            {
+                sum = sum + arr[i];
+            }
+            return sum;
+        }
+    }
 }

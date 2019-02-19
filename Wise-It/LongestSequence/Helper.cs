@@ -133,4 +133,54 @@ namespace LongestSequence
             return arr.Where(n => n == max).Count();
         }
     }
+
+    public static class TimeConverter
+    {
+        public static string ToMilitaryFormat(string time)
+        {
+            DateTime dt = DateTime.Parse(time);
+            return dt.ToString("HH:mm:ss");
+        }
+    }
+
+    //Not solved
+    public static class LightsOffCost
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="k">The distance from pressed button i where each toggle bulbs should be <=k from it </param>
+        /// <param name="c">The Cost for pressing the pulbs</param>
+        /// <returns></returns>
+        public static long TurnOffTheLightsCost(int k, int[] c)
+        {
+            return 0;
+        }
+    }
+
+    public static class GradingStudents {
+        public static int[] CalculateGrading(int[] grades)
+        {
+            var resultList = new List<int>();
+            foreach (var grade in grades)
+            {
+                int NextMultipleOfFive = (int)Math.Ceiling((double)grade / 5) * 5;
+                int checkValue = NextMultipleOfFive - grade;
+                if(Check(checkValue,grade))
+                {
+                    resultList.Add(NextMultipleOfFive);
+                }
+                else
+                {
+                    resultList.Add(grade);
+                }
+            }
+            return resultList.ToArray();
+        }
+
+        private static bool Check(int checkvalue, int grade)
+        {
+            return (checkvalue < 3 && grade >= 38);
+        }
+    }
 }

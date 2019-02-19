@@ -29,7 +29,12 @@ namespace LongestSequence
             //Console.WriteLine(MiniMax.MinSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
             //Console.WriteLine(MiniMax.MaxSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
 
-            Console.WriteLine(HeighestIntNumber.GetHighestNumber(new int[4] { 4,3,1,4}));
+            //Console.WriteLine(HeighestIntNumber.GetHighestNumber(new int[4] { 4,3,1,4}));
+
+            //Console.WriteLine(TimeConverter.ToMilitaryFormat("07:05:45PM"));
+
+            Console.WriteLine(GradingStudents.CalculateGrading(new int[4] { 73,67,38,33}));
+
 
             Solution();
             Console.ReadKey();

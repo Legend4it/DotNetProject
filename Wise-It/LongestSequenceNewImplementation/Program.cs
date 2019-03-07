@@ -1,5 +1,5 @@
 using System;
-using LongestSequence;
+using Hackerrank;
 
 namespace LongestSequenceNewImplementation
 {

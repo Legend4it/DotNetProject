@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LongestSequence
+namespace Hackerrank
 {
     public class ListTypeClass<T> : List<T>
     {
@@ -183,4 +183,6 @@ namespace LongestSequence
             return (checkvalue < 3 && grade >= 38);
         }
     }
+
+
 }

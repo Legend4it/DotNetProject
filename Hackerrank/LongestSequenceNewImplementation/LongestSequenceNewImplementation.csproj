@@ -49,7 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LongestSequence\Hackerrank.csproj">
+    <ProjectReference Include="..\HackerrankCodeChallenge\Hackerrank.csproj">
       <Project>{ba283282-b011-4e30-a33b-afba3aef1eef}</Project>
       <Name>Hackerrank</Name>
     </ProjectReference>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceNewImplementation", "Wise-It\LongestSequenceNewImplementation\LongestSequenceNewImplementation.csproj", "{98921BC0-7072-42E5-9735-3214BEE63C9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSequenceNewImplementation", "Hackerrank\LongestSequenceNewImplementation\LongestSequenceNewImplementation.csproj", "{98921BC0-7072-42E5-9735-3214BEE63C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackerrank", "Wise-It\LongestSequence\Hackerrank.csproj", "{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackerrank", "Hackerrank\HackerrankCodeChallenge\Hackerrank.csproj", "{BA283282-B011-4E30-A33B-AFBA3AEF1EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

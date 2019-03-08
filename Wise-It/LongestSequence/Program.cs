@@ -4,15 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LongestSequence
+namespace Hackerrank
 {
     class Program
     {
         private static List<int> theSequance = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
         static void Main(string[] args)
         {
+            //// Declare the array of two elements:
+            //int[][] arr = new int[3][];
+            //// Initialize the elements:
+            //arr[0] = new int[3] { 11, 2, 4 };
+            //arr[1] = new int[3] { 4, 5, 6 };
+            //arr[2] = new int[3] { 10, 8, -12 };
+            //Console.WriteLine(DiagonalOperations.Difference(arr));
 
-            
+
+            //Console.WriteLine(Fraction.PositiveFraction(new int[6] { -4, 3, -9, 0, 4, 1 }));
+            //Console.WriteLine(Fraction.NegativeFraction(new int[6] { -4, 3, -9, 0, 4, 1 }));
+            //Console.WriteLine(Fraction.ZeroFraction(new int[6] { -4, 3, -9, 0, 4, 1 }));
+
+            //TextAlignment.Staircase(6);
+
+            //Console.WriteLine(MiniMax.MinSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
+            //Console.WriteLine(MiniMax.MaxSum(new int[5] { 793810624, 895642170, 685903712, 623789054, 468592370 }));
+
+            //Console.WriteLine(HeighestIntNumber.GetHighestNumber(new int[4] { 4,3,1,4}));
+
+            //Console.WriteLine(TimeConverter.ToMilitaryFormat("07:05:45PM"));
+
+            //Console.WriteLine(GradingStudents.CalculateGrading(new int[4] { 73,67,38,33}));
+            Console.WriteLine(ApplesAndOranges.CalculateApples(s:7,t:11,a:5, apples:new int[] { -2,2,1}));
+            Console.WriteLine(ApplesAndOranges.CalculateOranges(s:7,t:11,b:15, oranges: new int[] { 5,-6 }));
+
             Solution();
             Console.ReadKey();
 

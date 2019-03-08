@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LongestSequence\LongestSequence.csproj">
+    <ProjectReference Include="..\LongestSequence\Hackerrank.csproj">
       <Project>{ba283282-b011-4e30-a33b-afba3aef1eef}</Project>
-      <Name>LongestSequence</Name>
+      <Name>Hackerrank</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

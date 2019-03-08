@@ -33,8 +33,9 @@ namespace Hackerrank
 
             //Console.WriteLine(TimeConverter.ToMilitaryFormat("07:05:45PM"));
 
-            Console.WriteLine(GradingStudents.CalculateGrading(new int[4] { 73,67,38,33}));
-
+            //Console.WriteLine(GradingStudents.CalculateGrading(new int[4] { 73,67,38,33}));
+            Console.WriteLine(ApplesAndOranges.CalculateApples(s:7,t:11,a:5, apples:new int[] { -2,2,1}));
+            Console.WriteLine(ApplesAndOranges.CalculateOranges(s:7,t:11,b:15, oranges: new int[] { 5,-6 }));
 
             Solution();
             Console.ReadKey();

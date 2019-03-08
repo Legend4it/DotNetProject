@@ -184,5 +184,21 @@ namespace Hackerrank
         }
     }
 
+    public static class ApplesAndOranges
+    {
+        public static int CalculateApples(int s,int t,int a, int[] apples)
+        {
+            var applesArray= apples.Select(apple => apple + a).ToArray();
+            var result= applesArray.Where(apple => apple >= s && apple <= t).ToArray();
+            return result.Count();
+        }
+        public static int CalculateOranges(int s, int t, int b, int[] oranges)
+        {
+            var orangesArray= oranges.Select(orange => orange + b).ToArray();
+            var result = orangesArray.Where(orange => orange >= s && orange <= t).ToArray();
+            return result.Count();
+        }
 
+
+    }
 }

@@ -27,8 +27,7 @@ namespace BuyAndSellGuld
             return dayForSell;
         }
 
-        //Get the Max Price for Sell
-        //Get the Lower Price for Buy
+        //Get the best or good Price for Sell according to Buy day price with minimum lost
         private void CalculateSellAndBuyDay(int nrOfDays,int dayToCheck)
         {
             while (API.ApiInstanse.CheckInDaysList(dayToCheck) && dayToCheck < nrOfDays)

@@ -8,38 +8,50 @@ namespace BuyAndSellGuld
 {
     public class Market
     {
-        private int buyDay,sellDay;
+        private int dayForBuy,dayForSell;
         List<int> prices = new List<int>();
 
         public Market()
         {
-            int nrOfDays = API.ApiInstanse.GetNumberOfDays();
-
-            for (int i = 0; i < nrOfDays; i++)
-            {
-                if(API.ApiInstanse.CheckInDaysList(i))
-                {
-                    prices.Add(API.ApiInstanse.GetPrisePerDay(i));
-                }
-            }
-
-            prices.Sort();
-
-            //Get the Max Price for Sell
-            buyDay = prices.First();
-
-            //Get the Lower Price for Buy
-            sellDay = prices.Last();
+            int theBuyDay = 2;
+            CalculateSellAndBuyDay(API.ApiInstanse.GetNumberOfDays(), theBuyDay);
         }
 
         public int GetBuyDay()
         {
-            return buyDay;
+            return dayForBuy;
         }
 
         public int GetSellDay()
         {
-            return sellDay;
+            return dayForSell;
+        }
+
+        //Get the Max Price for Sell
+        //Get the Lower Price for Buy
+        private void CalculateSellAndBuyDay(int nrOfDays,int dayToCheck)
+        {
+            while (API.ApiInstanse.CheckInDaysList(dayToCheck) && dayToCheck < nrOfDays)
+            {
+                dayForBuy = dayToCheck;
+                if (CheckSellDay(dayToCheck))
+                {
+                    dayForSell = dayToCheck + 1;
+                    break;
+                }
+                else
+                {
+                    dayForSell = dayForBuy;
+                }
+                dayToCheck++;
+            }
+
+        }
+        private bool CheckSellDay(int day)
+        {
+            int sellDay = day + 1;
+            int buyDay = day;
+            return API.ApiInstanse.GetPrisePerDay(sellDay) >= API.ApiInstanse.GetPrisePerDay(buyDay);
         }
     }
 }

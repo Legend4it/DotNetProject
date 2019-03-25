@@ -33,7 +33,7 @@ namespace BuyAndSellGuld
             while (API.ApiInstanse.CheckInDaysList(dayToCheck) && dayToCheck < nrOfDays)
             {
                 dayForBuy = dayToCheck;
-                if (CheckSellDay(dayToCheck))
+                if (DayToSell(dayToCheck))
                 {
                     dayForSell = dayToCheck + 1;
                     break;
@@ -46,7 +46,7 @@ namespace BuyAndSellGuld
             }
 
         }
-        private bool CheckSellDay(int day)
+        private bool DayToSell(int day)
         {
             int sellDay = day + 1;
             int buyDay = day;

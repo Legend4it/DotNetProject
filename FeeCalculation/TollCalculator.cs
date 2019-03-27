@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FeeCalculation;
+using System;
 using System.Globalization;
 using TollFeeCalculator;
 
@@ -22,62 +23,51 @@ public class TollCalculator
             int nextFee = GetTollFee(date, vehicle);
             int tempFee = GetTollFee(intervalStart, vehicle);
 
-            long diffInMillies = date.Millisecond - intervalStart.Millisecond;
-            long minutes = diffInMillies/1000/60;
-
-            if (minutes <= 60)
-            {
-                if (totalFee > 0) totalFee -= tempFee;
-                if (nextFee >= tempFee) tempFee = nextFee;
-                totalFee += tempFee;
-            }
-            else
-            {
-                totalFee += nextFee;
-            }
+            TimeSpan diffInMillies = date.Subtract(intervalStart);
+            double minutes = Math.Round(diffInMillies.TotalMinutes);
+            totalFee += nextFee;
         }
+
         if (totalFee > 60) totalFee = 60;
+
         return totalFee;
     }
 
     private bool IsTollFreeVehicle(Vehicle vehicle)
     {
         if (vehicle == null) return false;
-        String vehicleType = vehicle.GetVehicleType();
-        return vehicleType.Equals(TollFreeVehicles.Motorbike.ToString()) ||
-               vehicleType.Equals(TollFreeVehicles.Tractor.ToString()) ||
-               vehicleType.Equals(TollFreeVehicles.Emergency.ToString()) ||
-               vehicleType.Equals(TollFreeVehicles.Diplomat.ToString()) ||
-               vehicleType.Equals(TollFreeVehicles.Foreign.ToString()) ||
-               vehicleType.Equals(TollFreeVehicles.Military.ToString());
+        
+        return Enum.IsDefined(typeof(TollFreeVehicles), vehicle.GetVehicleType());
+
     }
 
     public int GetTollFee(DateTime date, Vehicle vehicle)
     {
         if (IsTollFreeDate(date) || IsTollFreeVehicle(vehicle)) return 0;
 
-        int hour = date.Hour;
-        int minute = date.Minute;
-
-        if (hour == 6 && minute >= 0 && minute <= 29) return 8;
-        else if (hour == 6 && minute >= 30 && minute <= 59) return 13;
-        else if (hour == 7 && minute >= 0 && minute <= 59) return 18;
-        else if (hour == 8 && minute >= 0 && minute <= 29) return 13;
-        else if (hour >= 8 && hour <= 14 && minute >= 30 && minute <= 59) return 8;
-        else if (hour == 15 && minute >= 0 && minute <= 29) return 13;
-        else if (hour == 15 && minute >= 0 || hour == 16 && minute <= 59) return 18;
-        else if (hour == 17 && minute >= 0 && minute <= 59) return 13;
-        else if (hour == 18 && minute >= 0 && minute <= 29) return 8;
-        else return 0;
+        return Fee.GetFee(date);
     }
 
-    private Boolean IsTollFreeDate(DateTime date)
+    private bool IsTollFreeDate(DateTime date)
+    {
+
+        if (IsWeekEnd(date)) return true;
+
+        if (IsFeeFreeDay(date)) return true;
+
+        return false;
+    }
+
+    private bool IsWeekEnd(DateTime date)
+    {
+        return (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday);
+    }
+
+    private bool IsFeeFreeDay(DateTime date)
     {
         int year = date.Year;
         int month = date.Month;
         int day = date.Day;
-
-        if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday) return true;
 
         if (year == 2013)
         {
@@ -94,6 +84,7 @@ public class TollCalculator
             }
         }
         return false;
+
     }
 
     private enum TollFreeVehicles

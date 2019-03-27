@@ -1,3 +1,4 @@
+using FeeCalculation.MockData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,8 @@ namespace FeeCalculation
         static void Main(string[] args)
         {
             var tollCalc = new TollCalculator();
-            var fee = tollCalc.GetTollFee(new Car(), new DateTime[] { DateTime.Now, DateTime.Now.AddMinutes(70) });//Addlist off time for each car
+            var fee = tollCalc.GetTollFee(new Car(), MockTimes.GetTimes());
 
-            //Use Event or thread to trig time object for one car, and pass them to Calculation
 
             Console.WriteLine($"Fee: {fee}");
             Console.ReadKey();

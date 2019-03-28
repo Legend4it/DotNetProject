@@ -47,12 +47,13 @@
   <ItemGroup>
     <Compile Include="Domain\Car.cs" />
     <Compile Include="Domain\Motorbike.cs" />
+    <Compile Include="Domain\VehicleBase.cs" />
     <Compile Include="Fee.cs" />
     <Compile Include="MockData\MockTimes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TollCalculator.cs" />
-    <Compile Include="Domain\Vehicle.cs" />
+    <Compile Include="Domain\IVehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FeeCalculation.Domain;
+using System;
 
-namespace TollFeeCalculator
+namespace TollFeeCalculator.Domain
 {
-    public class Car : Vehicle
+    public class Car : VehicleBase
     {
-        public String GetVehicleType()
+
+        public Car(string regNr)
+        {
+            RegNr = regNr;
+        }
+
+        public override String GetVehicleType()
         {
             return "Car";
         }

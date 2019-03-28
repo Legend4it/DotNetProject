@@ -1,6 +1,7 @@
 using FeeCalculation.MockData;
 using System;
 using TollFeeCalculator;
+using TollFeeCalculator.Domain;
 
 /// <summary>
 /// En project base on Evry code test
@@ -12,7 +13,7 @@ namespace FeeCalculation
         static void Main(string[] args)
         {
             var tollCalc = new TollCalculator();
-            var fee = tollCalc.GetTollFee(new Car(), MockTimes.GetTimes());
+            var fee = tollCalc.GetTollFee(new Car("XYZ221"), MockTimes.GetTimes());
 
             Console.WriteLine($"Fee: {fee}");
             Console.ReadKey();

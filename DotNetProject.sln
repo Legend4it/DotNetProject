@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyAndSellGuld", "BuyAndSel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeeCalculation", "FeeCalculation\FeeCalculation.csproj", "{0F526F59-79DD-4AE0-B27F-9CF320441785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppExcelToJsonParser", "..\Repos\ConsoleAppExcelToJsonParser\ConsoleAppExcelToJsonParser\ConsoleAppExcelToJsonParser.csproj", "{407F3F02-BB60-4C1E-949D-89B5C947018D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppExcelToJsonParser", "ConsoleAppExcelToJsonParser\ConsoleAppExcelToJsonParser\ConsoleAppExcelToJsonParser.csproj", "{407F3F02-BB60-4C1E-949D-89B5C947018D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "..\Repos\ConsoleAppExcelToJsonParser\UnitTest\UnitTest.csproj", "{957A7E96-D6F6-4FF5-80A9-7864B7C59BD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "ConsoleAppExcelToJsonParser\UnitTest\UnitTest.csproj", "{957A7E96-D6F6-4FF5-80A9-7864B7C59BD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
